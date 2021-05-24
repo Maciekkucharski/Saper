@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.050816696914700546, 0.8711433756805808" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="553.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="saper.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="21.0" prefWidth="810.0">
+         <children>
+            <MenuBar layoutX="-10.0" prefHeight="29.0" prefWidth="812.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Game">
+                     <items>
+                        <Menu mnemonicParsing="false" text="Difficulty">
+                           <items>
+                              <MenuItem fx:id="easy" mnemonicParsing="false" onAction="#setEasy" text="easy" />
+                              <MenuItem fx:id="medium" mnemonicParsing="false" onAction="#setMedium" text="medium" />
+                              <MenuItem fx:id="hard" mnemonicParsing="false" onAction="#setHard" text="hard" />
+                           </items>
+                        </Menu>
+                         <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="restart" mnemonicParsing="false" onAction="#restart" text="Restart" />
+                        <MenuItem fx:id="stop" mnemonicParsing="false" onAction="#stop" text="Stop" />
+                     </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Pane fx:id="timerPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="29.0" prefWidth="62.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="750.0">
+               <children>
+                  <VBox layoutX="7.0" layoutY="-2.0" prefHeight="24.0" prefWidth="55.0" />
+               </children></Pane>
+         </children>
+      </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="493.0" prefWidth="798.0">
+         <children>
+            <GridPane fx:id="gridPane" alignment="CENTER" gridLinesVisible="true" prefHeight="511.0" prefWidth="811.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+               </padding>
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tab" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="nick" prefWidth="75.0" text="Nick" />
+          <TableColumn fx:id="czas" prefWidth="75.0" text="Czas [s]" />
+        </columns>
+      </TableView>
+  </items>
+</SplitPane>
